@@ -7,7 +7,6 @@ def get_meme():
 
     url = "https://meme-api.herokuapp.com/gimme"
 
-    response = json.loads(request("GET", url).tetxt)
+    response = json.loads(requests("GET", url).tetxt)
 
     meme_large = response["preview"][2]
-    
