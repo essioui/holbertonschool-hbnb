@@ -1,9 +1,10 @@
 #!/usr/bin/python3
-from models.base_model import base_model
+from models.base_model import BaseModel
 
-class Place:
-    def __init__(self, user_id, city_id, name, latitude, longitude, host, description, number_rooms, number_bathrooms, max_guest, price_per_night):
+class Place(BaseModel):
+    def __init__(self,id, user_id, city_id, name, latitude, longitude, host, description, number_rooms, number_bathrooms, max_guest, price_per_night):
         super().__init__()
+        self.id = id
         self.user_id = user_id
         self.city_id = city_id
         self.name = name

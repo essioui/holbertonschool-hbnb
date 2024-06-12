@@ -1,11 +1,10 @@
 #!/usr/bin/python3
-from models.base_model import base_model
-"""
-"""
+from models.base_model import BaseModel
 
-class User(base_model):
-    def __init__(self, email, password, first_name, last_name):
-        super().__int__()
+class User(BaseModel):
+    def __init__(self,id, email, password, first_name, last_name):
+        super().__init__()
+        self.id = id
         self.email = email
         self.password = password
         self.first_name = first_name
